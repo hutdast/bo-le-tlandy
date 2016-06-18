@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0730"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B737B7721D14EF5E00162800"
+               BuildableName = "bo&#x300;le&#x300;tlandy.app"
+               BlueprintName = "bo&#x300;le&#x300;tlandy"
+               ReferencedContainer = "container:bo&#x300;le&#x300;tlandy.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B737B7891D14EF5E00162800"
+               BuildableName = "bo&#x300;le&#x300;tlandyTests.xctest"
+               BlueprintName = "bo&#x300;le&#x300;tlandyTests"
+               ReferencedContainer = "container:bo&#x300;le&#x300;tlandy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B737B7941D14EF5E00162800"
+               BuildableName = "bo&#x300;le&#x300;tlandyUITests.xctest"
+               BlueprintName = "bo&#x300;le&#x300;tlandyUITests"
+               ReferencedContainer = "container:bo&#x300;le&#x300;tlandy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B737B7721D14EF5E00162800"
+            BuildableName = "bo&#x300;le&#x300;tlandy.app"
+            BlueprintName = "bo&#x300;le&#x300;tlandy"
+            ReferencedContainer = "container:bo&#x300;le&#x300;tlandy.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B737B7721D14EF5E00162800"
+            BuildableName = "bo&#x300;le&#x300;tlandy.app"
+            BlueprintName = "bo&#x300;le&#x300;tlandy"
+            ReferencedContainer = "container:bo&#x300;le&#x300;tlandy.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B737B7721D14EF5E00162800"
+            BuildableName = "bo&#x300;le&#x300;tlandy.app"
+            BlueprintName = "bo&#x300;le&#x300;tlandy"
+            ReferencedContainer = "container:bo&#x300;le&#x300;tlandy.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
