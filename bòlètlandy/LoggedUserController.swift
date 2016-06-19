@@ -22,7 +22,7 @@ class LoggedUserController: UIViewController {
         super.viewDidLoad()
         UIView.animateWithDuration(1.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: {self.generateBtn.frame.origin.x = 200;
             self.testBtn.frame.origin.x = -200},
-                                   completion:{(finished: Bool) ->() in })
+                                   completion:nil)
         
         //User logout when going back to the loging view
         self.navigationItem.hidesBackButton = true
