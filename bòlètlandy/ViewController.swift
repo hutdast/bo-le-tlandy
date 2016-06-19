@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIView.animateWithDuration(2.0, delay: 1.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {self.image.frame.origin.y = 200}, completion:{(finished: Bool) ->() in })
+      
         // Get api token as required for authentication
          url = "https://klpnfamily.com/api"
         json = request.getDataFromGet(url)
@@ -37,7 +37,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
      * Disable the continue button in the event the user logout or start the app anew and set the errorlogingLable to nothing
      **/
     override func viewWillAppear(animated: Bool) {
-
+          UIView.animateWithDuration(2.0, delay: 0.2, options: UIViewAnimationOptions.CurveEaseInOut, animations: {self.image.frame.origin.y = 200}, completion:{(finished: Bool) ->() in })
+        
         //Disable the accessButton so user woould not be able to access (or segue) to the application without authentication
         accessButton.enabled = false
         errorLoginLabel.text = ""

@@ -14,10 +14,16 @@ class LoggedUserController: UIViewController {
     var user:String!
     var session: String!
 
+    @IBOutlet weak var generateBtn: UIButton!
     @IBOutlet weak var userGreetingLabel: UILabel!
+    @IBOutlet weak var testBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIView.animateWithDuration(1.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: {self.generateBtn.frame.origin.x = 200;
+            self.testBtn.frame.origin.x = -200},
+                                   completion:{(finished: Bool) ->() in })
+        
         //User logout when going back to the loging view
         self.navigationItem.hidesBackButton = true
         let backbtn = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.Bordered, target: self, action: "logout")
