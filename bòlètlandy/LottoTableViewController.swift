@@ -35,13 +35,17 @@ var arrayOfLotto:[String]!
         let cell = tableView.dequeueReusableCellWithIdentifier("lottoCell", forIndexPath: indexPath)
         cell.textLabel?.text = arrayOfLotto[indexPath.row]
         let cellBg = UIView()
-        cellBg.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 0.3, alpha: 0.6)
+        cellBg.backgroundColor = UIColor(red: 0.0, green: 1.0, blue: 0.3, alpha: 0.6)
         cell.selectedBackgroundView = cellBg
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("slected")
+        let alertWindow = UIAlertController(title: "Save Lotto", message: "Would you like to save this lotto? \(arrayOfLotto[indexPath.row])", preferredStyle: .ActionSheet)
+        let cancelBtn = UIAlertAction(title: "Cancel", style: .Cancel, handler: {(action) in alertWindow.dismissViewControllerAnimated(true, completion: nil) })
+        alertWindow.addAction(cancelBtn)
+        self.presentViewController(alertWindow, animated: true, completion: nil)
+        
     }
 
     
