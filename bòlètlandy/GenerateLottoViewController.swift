@@ -9,6 +9,7 @@
 import UIKit
 import CoreData//import coreData in order for NSMAnagedObjectContext to work
 
+
 class GenerateLottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var session: String!
     var url:String!
@@ -73,63 +74,23 @@ class GenerateLottoViewController: UIViewController, UIPickerViewDelegate, UIPic
           numberOfLotto = numberOfLottoData[row]
         }
 
-        
     }
 
     
-    /**
-     *getLuckySet function takes the ranges of the 5 main numbers and the the bonus
-     * number for either power or mega. It then returns an array that contains 6 random
-     * numbers which account for one set or one play.
-     **/
-    func getLuckySet(mainMax:UInt32, bonusMax:UInt32)-> [Int]{
-        var luckyNumbers = [Int]()
-        var first = Int(arc4random_uniform(mainMax) + 1)
-        
-        while luckyNumbers.count < 5 {
-            if !luckyNumbers.contains(first){
-                luckyNumbers.append(first)
-            }
-            
-            let remain = Int(mainMax) - first
-            first = Int(arc4random_uniform(UInt32(remain)) + 1)
-            
-        }
-        luckyNumbers.sortInPlace()
-        
-        let head:UInt32 = 1
-       let range:UInt32 = bonusMax - head
-        //Bonus number
-        luckyNumbers.append(Int(arc4random_uniform(range)+head))
-        return luckyNumbers
-    }
-
+    
+    
     @IBAction func generateLotto(sender: AnyObject)
     {
         var max:[UInt32] = (typeOfLotto == nil ? [75,15] : [69,26])
-      
-        
-        let appStorage:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context: NSManagedObjectContext = appStorage.managedObjectContext
-        let lotto = NSEntityDescription.insertNewObjectForEntityForName("Lotto", inManagedObjectContext: context)
-        lotto.setValue(user, forKey: "user")
-        lotto.setValue(session, forKey: "session")
-        
+    let l = LottoOps()
         repeat{
             numberOfLotto = (numberOfLotto == nil ? 0 : numberOfLotto) - 1
-            let s = getLuckySet(max[0], bonusMax:max[1]).map{String($0)}.joinWithSeparator(" ")
+            let s = l.getLuckySet(max[0], bonusMax:max[1]).map{String($0)}.joinWithSeparator(" ")
             arrayOfLotto.append(s)
             
         }while numberOfLotto > 1
        
-   lotto.setValue(arrayOfLotto, forKey: "payload")
-      
-        do {
-            try context.save()
-        } catch {
-            fatalError("Failure to save context: \(error)")
-        }
-
+  
     }
     
 
