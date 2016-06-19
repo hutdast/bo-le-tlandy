@@ -378,7 +378,7 @@
                                 </state>
                                 <connections>
                                     <action selector="generateLotto:" destination="6FU-bf-U5e" eventType="touchUpInside" id="Ccs-PT-ko8"/>
-                                    <segue destination="IJi-4s-0Ph" kind="show" identifier="generate" id="tJ9-EG-MCe"/>
+                                    <segue destination="mzj-dk-ltj" kind="show" identifier="generate" id="9Ri-Ot-z9j"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generate Lotto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ2-JB-4vm">
@@ -423,34 +423,34 @@
             </objects>
             <point key="canvasLocation" x="1844.5" y="1422.5"/>
         </scene>
-        <!--Lotto List View Controller-->
-        <scene sceneID="TGw-fs-2hx">
+        <!--Lotto Table View Controller-->
+        <scene sceneID="9qY-qC-AWG">
             <objects>
-                <tableViewController id="IJi-4s-0Ph" customClass="LottoListViewController" customModule="bo_le_tlandy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="31" sectionHeaderHeight="28" sectionFooterHeight="28" id="f1W-y2-5vR">
+                <tableViewController id="mzj-dk-ltj" customClass="LottoTableViewController" customModule="bo_le_tlandy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="J9B-gF-Y10">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="lottoCell" rowHeight="31" id="yh2-ln-ZTk">
-                                <rect key="frame" x="0.0" y="92" width="375" height="31"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lottoCell" id="Jmm-jk-JF1">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yh2-ln-ZTk" id="9er-Yd-hZ8">
-                                    <rect key="frame" x="0.0" y="0.0" width="328" height="30"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jmm-jk-JF1" id="99E-My-GMo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="IJi-4s-0Ph" id="HEd-0f-USb"/>
-                            <outlet property="delegate" destination="IJi-4s-0Ph" id="XdU-Or-ir9"/>
+                            <outlet property="dataSource" destination="mzj-dk-ltj" id="Qqu-bo-V5T"/>
+                            <outlet property="delegate" destination="mzj-dk-ltj" id="DK1-5e-x87"/>
                         </connections>
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="evq-Ki-t8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAO-MF-mmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844.5" y="2257.5"/>
+            <point key="canvasLocation" x="1844.5" y="2211.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9GP-4T-bhZ">

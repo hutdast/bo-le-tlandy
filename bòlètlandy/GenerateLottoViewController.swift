@@ -102,7 +102,7 @@ class GenerateLottoViewController: UIViewController, UIPickerViewDelegate, UIPic
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
               if segue.identifier == "generate" {
-            if let destination = segue.destinationViewController as? LottoListViewController{
+            if let destination = segue.destinationViewController as? LottoTableViewController{
                 destination.arrayOfLotto = arrayOfLotto
             }
         }

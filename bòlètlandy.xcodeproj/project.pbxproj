@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70864F61D173934003C4457 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70864F51D173934003C4457 /* PopOverViewController.swift */; };
+		B70864F81D174742003C4457 /* LottoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70864F71D174742003C4457 /* LottoTableViewController.swift */; };
 		B70FD2FF1D16728100E88334 /* LottoOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70FD2FE1D16728100E88334 /* LottoOps.swift */; };
 		B737B7771D14EF5E00162800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737B7761D14EF5E00162800 /* AppDelegate.swift */; };
 		B737B77F1D14EF5E00162800 /* bo_le_tlandy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B737B77D1D14EF5E00162800 /* bo_le_tlandy.xcdatamodeld */; };
@@ -17,7 +19,6 @@
 		B737B7AF1D14EFA100162800 /* LoggedUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737B7AB1D14EFA100162800 /* LoggedUserController.swift */; };
 		B737B7B01D14EFA100162800 /* GenerateLottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737B7AC1D14EFA100162800 /* GenerateLottoViewController.swift */; };
 		B737B7B11D14EFA100162800 /* TestLuckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737B7AD1D14EFA100162800 /* TestLuckViewController.swift */; };
-		B737B7B21D14EFA100162800 /* LottoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737B7AE1D14EFA100162800 /* LottoListViewController.swift */; };
 		B737B7B61D14EFB100162800 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737B7B31D14EFB100162800 /* ViewController.swift */; };
 		B737B7B71D14EFB100162800 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B737B7B41D14EFB100162800 /* Main.storyboard */; };
 		B737B7B81D14EFB100162800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B737B7B51D14EFB100162800 /* Assets.xcassets */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B70864F51D173934003C4457 /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
+		B70864F71D174742003C4457 /* LottoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottoTableViewController.swift; sourceTree = "<group>"; };
 		B70FD2FE1D16728100E88334 /* LottoOps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottoOps.swift; sourceTree = "<group>"; };
 		B737B7731D14EF5E00162800 /* bòlètlandy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bòlètlandy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B737B7761D14EF5E00162800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +62,6 @@
 		B737B7AB1D14EFA100162800 /* LoggedUserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedUserController.swift; sourceTree = "<group>"; };
 		B737B7AC1D14EFA100162800 /* GenerateLottoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateLottoViewController.swift; sourceTree = "<group>"; };
 		B737B7AD1D14EFA100162800 /* TestLuckViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestLuckViewController.swift; sourceTree = "<group>"; };
-		B737B7AE1D14EFA100162800 /* LottoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottoListViewController.swift; sourceTree = "<group>"; };
 		B737B7B31D14EFB100162800 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B737B7B41D14EFB100162800 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B737B7B51D14EFB100162800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,8 +128,9 @@
 				B737B7AB1D14EFA100162800 /* LoggedUserController.swift */,
 				B737B7AC1D14EFA100162800 /* GenerateLottoViewController.swift */,
 				B737B7AD1D14EFA100162800 /* TestLuckViewController.swift */,
-				B737B7AE1D14EFA100162800 /* LottoListViewController.swift */,
 				B70FD2FE1D16728100E88334 /* LottoOps.swift */,
+				B70864F51D173934003C4457 /* PopOverViewController.swift */,
+				B70864F71D174742003C4457 /* LottoTableViewController.swift */,
 			);
 			path = "bòlètlandy";
 			sourceTree = "<group>";
@@ -283,12 +286,13 @@
 			files = (
 				B70FD2FF1D16728100E88334 /* LottoOps.swift in Sources */,
 				B737B77F1D14EF5E00162800 /* bo_le_tlandy.xcdatamodeld in Sources */,
-				B737B7B21D14EFA100162800 /* LottoListViewController.swift in Sources */,
+				B70864F61D173934003C4457 /* PopOverViewController.swift in Sources */,
 				B737B7B11D14EFA100162800 /* TestLuckViewController.swift in Sources */,
 				B737B7A91D14EF7900162800 /* ServerRequest.m in Sources */,
 				B737B7B01D14EFA100162800 /* GenerateLottoViewController.swift in Sources */,
 				B737B7AF1D14EFA100162800 /* LoggedUserController.swift in Sources */,
 				B737B7B61D14EFB100162800 /* ViewController.swift in Sources */,
+				B70864F81D174742003C4457 /* LottoTableViewController.swift in Sources */,
 				B737B7771D14EF5E00162800 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
