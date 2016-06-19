@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var errorLoginLabel: UILabel!
     var token:String!
     var url:String!
+    var response:String!
     var json:NSDictionary!
    let request = ServerRequest()
     
@@ -52,11 +53,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let post:String = "username=\(usernameField.text!)&password=\(passwordField.text!)&_token=\(token)"
        url  = "https://klpnfamily.com/api/login"
          json = request.getDataFromPost(url, dataString: post)
-        let response:String = json["response"] as! String
+         response = json["response"] as! String
       errorLoginLabel.textColor =  (response == "success" ?  UIColor.greenColor() : UIColor.redColor() )
         
         errorLoginLabel.text = " \(response)"
         accessButton.enabled = (response == "success" ? true :false)
+        if response == "success"{
+        self.performSegueWithIdentifier("toAuthArea", sender: sender)
+        }
         
     }
     
@@ -67,21 +71,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
      * 
     **/
  
+    
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
      {
         url  = "https://klpnfamily.com/api/check"
         json = request.getDataFromGet(url)
-        let response:String = json["response"] as! String
+         response = json["response"] as! String
         
+       
         if segue.identifier == "toAuthArea" {
             if let destination = segue.destinationViewController as? LoggedUserController {
                 destination.request = request
                 destination.user = usernameField.text!
-                destination.session = (response == "checked" ? json["session"] as! String : "none")
+                destination.session =   (response == "checked" ? json["session"] as! String : "none")
             }
-        }
-
+        }//End of segue identifier
+        
      }
  
     

@@ -94,9 +94,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="OTa-RY-F2A"/>
                                 </constraints>
-                                <state key="normal" title="Continue"/>
                                 <connections>
-                                    <segue destination="7ce-Kk-Ypz" kind="show" identifier="toAuthArea" id="jK1-NK-ol3"/>
+                                    <segue destination="7ce-Kk-Ypz" kind="show" identifier="toAuthArea" id="KuL-PK-T2d"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -377,6 +376,7 @@
                                 </state>
                                 <connections>
                                     <action selector="generateLotto:" destination="6FU-bf-U5e" eventType="touchUpInside" id="Ccs-PT-ko8"/>
+                                    <segue destination="IJi-4s-0Ph" kind="show" identifier="generate" id="tJ9-EG-MCe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generate Lotto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ2-JB-4vm">
@@ -388,13 +388,6 @@
                                 <color key="textColor" red="0.084485836327075958" green="0.36172068119049072" blue="0.34633305668830872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLy-uv-g43">
-                                <rect key="frame" x="89" y="425" width="92" height="46"/>
-                                <state key="normal" title="show"/>
-                                <connections>
-                                    <segue destination="IJi-4s-0Ph" kind="show" identifier="generate" id="yBC-m7-Vdr"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -428,10 +421,10 @@
             </objects>
             <point key="canvasLocation" x="1844.5" y="1422.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Lotto List View Controller-->
         <scene sceneID="TGw-fs-2hx">
             <objects>
-                <tableViewController id="IJi-4s-0Ph" sceneMemberID="viewController">
+                <tableViewController id="IJi-4s-0Ph" customClass="LottoListViewController" customModule="bo_le_tlandy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="f1W-y2-5vR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -447,7 +440,7 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="IJi-4s-0Ph" id="bMF-5A-uU3"/>
+                            <outlet property="dataSource" destination="IJi-4s-0Ph" id="HEd-0f-USb"/>
                             <outlet property="delegate" destination="IJi-4s-0Ph" id="XdU-Or-ir9"/>
                         </connections>
                     </tableView>
@@ -455,7 +448,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evq-Ki-t8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844.5" y="2236.5"/>
+            <point key="canvasLocation" x="1844.5" y="2257.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9GP-4T-bhZ">

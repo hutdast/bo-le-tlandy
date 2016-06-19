@@ -7,27 +7,27 @@
 //
 
 import UIKit
+import CoreData//import coreData in order for NSMAnagedObjectContext to work
 
-class GenerateLottoViewController: UIViewController, UIPickerViewDelegate {
+class GenerateLottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var session: String!
     var url:String!
     var request: ServerRequest!
     var user:String!
-    var numberOfLottoData:[Int]!
-    var lottoTypeData:[String]!
+    var numberOfLottoData = Array(1...20)
+    var lottoTypeData = ["Select a type","Mega", "Power"]
     var numberOfLotto:Int!
     var typeOfLotto:String!
-    var arrayOfLotto:[String]!
+    var arrayOfLotto = [String]()
     
     
     @IBOutlet weak var numberOfLottoPicker: UIPickerView!
     @IBOutlet weak var lottoTypePicker: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         numberOfLottoPicker.delegate = self
         lottoTypePicker.delegate = self
-        numberOfLottoData = Array(1...20)
-        lottoTypeData = ["Mega", "Power"]
        
     }
     
@@ -50,8 +50,9 @@ class GenerateLottoViewController: UIViewController, UIPickerViewDelegate {
         }
        
     }
+  
     
-    // The data to return for the row and component (column) that's being passed in
+    
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == lottoTypePicker {
             return lottoTypeData[row]
@@ -59,8 +60,11 @@ class GenerateLottoViewController: UIViewController, UIPickerViewDelegate {
             return String(numberOfLottoData[row])
         }
 
-        
     }
+    
+       
+        
+        
     // Catpure the picker view selection
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == lottoTypePicker {
@@ -102,18 +106,30 @@ class GenerateLottoViewController: UIViewController, UIPickerViewDelegate {
 
     @IBAction func generateLotto(sender: AnyObject)
     {
-//        var max:[UInt32] = (typeOfLotto == "Mega" ? [75,15] : [69,26])
-         arrayOfLotto = [String]()
-        numberOfLotto = 7
-        var max:[UInt32] =  [75,15]
+        var max:[UInt32] = (typeOfLotto == nil ? [75,15] : [69,26])
+      
+        
+        let appStorage:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context: NSManagedObjectContext = appStorage.managedObjectContext
+        let lotto = NSEntityDescription.insertNewObjectForEntityForName("Lotto", inManagedObjectContext: context)
+        lotto.setValue(user, forKey: "user")
+        lotto.setValue(session, forKey: "session")
         
         repeat{
-            numberOfLotto = numberOfLotto - 1
+            numberOfLotto = (numberOfLotto == nil ? 0 : numberOfLotto) - 1
             let s = getLuckySet(max[0], bonusMax:max[1]).map{String($0)}.joinWithSeparator(" ")
             arrayOfLotto.append(s)
             
         }while numberOfLotto > 1
-    
+       
+   lotto.setValue(arrayOfLotto, forKey: "payload")
+      
+        do {
+            try context.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+
     }
     
 
@@ -124,7 +140,7 @@ class GenerateLottoViewController: UIViewController, UIPickerViewDelegate {
     
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "generate" {
+              if segue.identifier == "generate" {
             if let destination = segue.destinationViewController as? LottoListViewController{
                 destination.arrayOfLotto = arrayOfLotto
             }

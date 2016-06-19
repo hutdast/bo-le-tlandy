@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import CoreData
 
 class LottoListViewController: UITableViewController {
     var arrayOfLotto:[String]!
-
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.clearsSelectionOnViewWillAppear = false
@@ -33,15 +35,15 @@ class LottoListViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return arrayOfLotto.count
+
     }
 
     /*
      */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("lottoCell", forIndexPath: indexPath)
+
         cell.textLabel?.text = arrayOfLotto[indexPath.row]
-        
-       
         return cell
     }
  

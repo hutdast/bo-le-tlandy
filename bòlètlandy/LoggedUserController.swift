@@ -26,6 +26,13 @@ class LoggedUserController: UIViewController {
         userGreetingLabel.text = "Hey \(user)"
         
     }
+    override func viewWillAppear(animated: Bool) {
+//        if session == nil {
+//            var login = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ViewController") as! ViewController
+//            //set properties of login
+//            self.presentViewController(login, animated: YES)
+//        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
