@@ -16,9 +16,7 @@ class LottoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.clearsSelectionOnViewWillAppear = false
-
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
         let tapGest = UITapGestureRecognizer(target: self, action: Selector("saveSelected:"))
         view.addGestureRecognizer(tapGest)
         
@@ -52,6 +50,9 @@ class LottoListViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("lottoCell", forIndexPath: indexPath)
         cell.textLabel?.text = arrayOfLotto[indexPath.row]
+        let cellBg = UIView()
+        cellBg.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 0.3, alpha: 0.6)
+        cell.selectedBackgroundView = cellBg
         return cell
     }
  
@@ -70,6 +71,10 @@ class LottoListViewController: UITableViewController {
         }    
     }
  
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        <#code#>
+    }
+    
 
     /*
     // Override to support rearranging the table view.

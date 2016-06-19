@@ -85,7 +85,7 @@ class GenerateLottoViewController: UIViewController, UIPickerViewDelegate, UIPic
     let l = LottoOps()
         repeat{
             numberOfLotto = (numberOfLotto == nil ? 0 : numberOfLotto) - 1
-            let s = l.getLuckySet(max[0], bonusMax:max[1]).map{String($0)}.joinWithSeparator(" ")
+            let s = l.getLuckySet(max[0], bonusMax:max[1]).map{String($0)}.joinWithSeparator("🔷")
             arrayOfLotto.append(s)
             
         }while numberOfLotto > 1
