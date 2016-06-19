@@ -18,7 +18,16 @@ class LottoListViewController: UITableViewController {
         self.clearsSelectionOnViewWillAppear = false
 
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let tapGest = UITapGestureRecognizer(target: self, action: Selector("saveSelected:"))
+        view.addGestureRecognizer(tapGest)
+        
     }
+    func saveSelected(tap:UITapGestureRecognizer)  {
+        let selected:NSIndexPath = self.tableView.indexPathForSelectedRow!
+        print(arrayOfLotto[selected.row])//Found nil
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -42,31 +51,25 @@ class LottoListViewController: UITableViewController {
      */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("lottoCell", forIndexPath: indexPath)
-
         cell.textLabel?.text = arrayOfLotto[indexPath.row]
         return cell
     }
  
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
 
-    /*
+
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            arrayOfLotto.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+ 
 
     /*
     // Override to support rearranging the table view.
@@ -82,6 +85,14 @@ class LottoListViewController: UITableViewController {
         return true
     }
     */
+    
+    /*
+     // Override to support conditional editing of the table view.
+     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
 
     /*
     // MARK: - Navigation

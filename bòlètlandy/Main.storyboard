@@ -425,16 +425,16 @@
         <scene sceneID="TGw-fs-2hx">
             <objects>
                 <tableViewController id="IJi-4s-0Ph" customClass="LottoListViewController" customModule="bo_le_tlandy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="f1W-y2-5vR">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="31" sectionHeaderHeight="28" sectionFooterHeight="28" id="f1W-y2-5vR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lottoCell" id="yh2-ln-ZTk">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="lottoCell" rowHeight="31" id="yh2-ln-ZTk">
+                                <rect key="frame" x="0.0" y="92" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yh2-ln-ZTk" id="9er-Yd-hZ8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="336" height="30"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

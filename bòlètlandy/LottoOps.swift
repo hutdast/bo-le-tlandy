@@ -43,7 +43,7 @@ class LottoOps: NSObject {
     }
 
     
-    func saveSession(user:String, session:String, payload:[String]){
+    func saveSession()->String{
         let appStorage:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context: NSManagedObjectContext = appStorage.managedObjectContext
         let lotto = NSEntityDescription.insertNewObjectForEntityForName("Lotto", inManagedObjectContext: context)
@@ -52,10 +52,12 @@ class LottoOps: NSObject {
         lotto.setValue(payload, forKey: "payload")
         
         
+        
         do {
             try context.save()
+            return "saved"
         } catch {
-            fatalError("Failure to save context: \(error)")
+           return "Failure to save context: \(error)"
         }
 
         
