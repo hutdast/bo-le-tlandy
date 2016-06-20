@@ -87,9 +87,11 @@ class GenerateLottoViewController: UIViewController, UIPickerViewDelegate, UIPic
             numberOfLotto = (numberOfLotto == nil ? 0 : numberOfLotto) - 1
             let s = l.getLuckySet(max[0], bonusMax:max[1]).map{String($0)}.joinWithSeparator("🔷")
             arrayOfLotto.append(s)
-            
+           
         }while numberOfLotto > 1
-       
+    l.user = "nick"
+        l.saveSession()
+        print(l.user)
   
     }
     

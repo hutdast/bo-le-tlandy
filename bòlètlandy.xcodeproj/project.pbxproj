@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B70864F61D173934003C4457 /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70864F51D173934003C4457 /* PopOverViewController.swift */; };
 		B70864F81D174742003C4457 /* LottoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70864F71D174742003C4457 /* LottoTableViewController.swift */; };
+		B70C65E31D178BBF00D726DD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B70C65E11D178BBF00D726DD /* Model.xcdatamodeld */; };
+		B70C65EA1D1797F900D726DD /* Lotto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C65E81D1797F900D726DD /* Lotto+CoreDataProperties.swift */; };
+		B70C65EB1D1797F900D726DD /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C65E91D1797F900D726DD /* Lotto.swift */; };
 		B70FD2FF1D16728100E88334 /* LottoOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70FD2FE1D16728100E88334 /* LottoOps.swift */; };
 		B737B7771D14EF5E00162800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737B7761D14EF5E00162800 /* AppDelegate.swift */; };
-		B737B77F1D14EF5E00162800 /* bo_le_tlandy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B737B77D1D14EF5E00162800 /* bo_le_tlandy.xcdatamodeld */; };
 		B737B7841D14EF5E00162800 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B737B7821D14EF5E00162800 /* LaunchScreen.storyboard */; };
 		B737B78F1D14EF5E00162800 /* bo_le_tlandyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737B78E1D14EF5E00162800 /* bo_le_tlandyTests.swift */; };
 		B737B79A1D14EF5E00162800 /* bo_le_tlandyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B737B7991D14EF5E00162800 /* bo_le_tlandyUITests.swift */; };
@@ -42,12 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B70864F51D173934003C4457 /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		B70864F71D174742003C4457 /* LottoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottoTableViewController.swift; sourceTree = "<group>"; };
+		B70C65E21D178BBF00D726DD /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B70C65E81D1797F900D726DD /* Lotto+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lotto+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B70C65E91D1797F900D726DD /* Lotto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
 		B70FD2FE1D16728100E88334 /* LottoOps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottoOps.swift; sourceTree = "<group>"; };
 		B737B7731D14EF5E00162800 /* bòlètlandy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bòlètlandy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B737B7761D14EF5E00162800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B737B77E1D14EF5E00162800 /* bo_le_tlandy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bo_le_tlandy.xcdatamodel; sourceTree = "<group>"; };
 		B737B7831D14EF5E00162800 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B737B7851D14EF5E00162800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B737B78A1D14EF5E00162800 /* bòlètlandyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bòlètlandyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,9 @@
 		B737B76A1D14EF5E00162800 = {
 			isa = PBXGroup;
 			children = (
+				B70C65E81D1797F900D726DD /* Lotto+CoreDataProperties.swift */,
+				B70C65E91D1797F900D726DD /* Lotto.swift */,
+				B70C65E11D178BBF00D726DD /* Model.xcdatamodeld */,
 				B737B7751D14EF5E00162800 /* bòlètlandy */,
 				B737B78D1D14EF5E00162800 /* bòlètlandyTests */,
 				B737B7981D14EF5E00162800 /* bòlètlandyUITests */,
@@ -122,14 +127,12 @@
 				B737B7821D14EF5E00162800 /* LaunchScreen.storyboard */,
 				B737B7A81D14EF7900162800 /* ServerRequest.m */,
 				B737B7851D14EF5E00162800 /* Info.plist */,
-				B737B77D1D14EF5E00162800 /* bo_le_tlandy.xcdatamodeld */,
 				B737B7AA1D14EF9300162800 /* ServerRequest.h */,
 				B737B7A71D14EF7900162800 /* bòlètlandy-Bridging-Header.h */,
 				B737B7AB1D14EFA100162800 /* LoggedUserController.swift */,
 				B737B7AC1D14EFA100162800 /* GenerateLottoViewController.swift */,
 				B737B7AD1D14EFA100162800 /* TestLuckViewController.swift */,
 				B70FD2FE1D16728100E88334 /* LottoOps.swift */,
-				B70864F51D173934003C4457 /* PopOverViewController.swift */,
 				B70864F71D174742003C4457 /* LottoTableViewController.swift */,
 			);
 			path = "bòlètlandy";
@@ -285,14 +288,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70FD2FF1D16728100E88334 /* LottoOps.swift in Sources */,
-				B737B77F1D14EF5E00162800 /* bo_le_tlandy.xcdatamodeld in Sources */,
-				B70864F61D173934003C4457 /* PopOverViewController.swift in Sources */,
 				B737B7B11D14EFA100162800 /* TestLuckViewController.swift in Sources */,
 				B737B7A91D14EF7900162800 /* ServerRequest.m in Sources */,
 				B737B7B01D14EFA100162800 /* GenerateLottoViewController.swift in Sources */,
+				B70C65EA1D1797F900D726DD /* Lotto+CoreDataProperties.swift in Sources */,
 				B737B7AF1D14EFA100162800 /* LoggedUserController.swift in Sources */,
 				B737B7B61D14EFB100162800 /* ViewController.swift in Sources */,
+				B70C65EB1D1797F900D726DD /* Lotto.swift in Sources */,
 				B70864F81D174742003C4457 /* LottoTableViewController.swift in Sources */,
+				B70C65E31D178BBF00D726DD /* Model.xcdatamodeld in Sources */,
 				B737B7771D14EF5E00162800 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,13 +546,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B737B77D1D14EF5E00162800 /* bo_le_tlandy.xcdatamodeld */ = {
+		B70C65E11D178BBF00D726DD /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B737B77E1D14EF5E00162800 /* bo_le_tlandy.xcdatamodel */,
+				B70C65E21D178BBF00D726DD /* Model.xcdatamodel */,
 			);
-			currentVersion = B737B77E1D14EF5E00162800 /* bo_le_tlandy.xcdatamodel */;
-			path = bo_le_tlandy.xcdatamodeld;
+			currentVersion = B70C65E21D178BBF00D726DD /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -336,7 +336,7 @@
         <!--Generate Lotto View Controller-->
         <scene sceneID="dsO-Vn-GBF">
             <objects>
-                <viewController id="6FU-bf-U5e" customClass="GenerateLottoViewController" customModule="bo_le_tlandy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6FU-bf-U5e" customClass="GenerateLottoViewController" customModule="bo_le_tlandy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oVQ-4V-v7C"/>
                         <viewControllerLayoutGuide type="bottom" id="0Cl-Ip-H9l"/>
@@ -426,7 +426,7 @@
         <!--Lotto Table View Controller-->
         <scene sceneID="9qY-qC-AWG">
             <objects>
-                <tableViewController id="mzj-dk-ltj" customClass="LottoTableViewController" customModule="bo_le_tlandy" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mzj-dk-ltj" customClass="LottoTableViewController" customModule="bo_le_tlandy" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="J9B-gF-Y10">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

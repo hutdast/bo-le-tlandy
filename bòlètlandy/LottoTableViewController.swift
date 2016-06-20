@@ -11,6 +11,7 @@ import CoreData
 
 class LottoTableViewController: UITableViewController {
 var arrayOfLotto:[String]!
+    var lotto = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +28,16 @@ var arrayOfLotto:[String]!
    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-       return arrayOfLotto.count
+//       return arrayOfLotto.count
+        return lotto.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("lottoCell", forIndexPath: indexPath)
-        cell.textLabel?.text = arrayOfLotto[indexPath.row]
+//        cell.textLabel?.text = arrayOfLotto[indexPath.row]
+        let l = lotto[indexPath.row]
+        cell.textLabel?.text = l.valueForKey("user") as? String
         let cellBg = UIView()
         cellBg.backgroundColor = UIColor(red: 0.0, green: 1.0, blue: 0.3, alpha: 0.6)
         cell.selectedBackgroundView = cellBg
@@ -42,7 +46,13 @@ var arrayOfLotto:[String]!
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let alertWindow = UIAlertController(title: "Save Lotto", message: "Would you like to save this lotto? \(arrayOfLotto[indexPath.row])", preferredStyle: .ActionSheet)
-        let cancelBtn = UIAlertAction(title: "Cancel", style: .Cancel, handler: {(action) in alertWindow.dismissViewControllerAnimated(true, completion: nil) })
+        let cancelBtn = UIAlertAction(title: "Cancel", style: .Cancel, handler: {(action) in
+            let l = LottoOps()
+            l.user = "nick"
+            l.session = " an number"
+            l.payload = self.arrayOfLotto
+           print(l.saveSession()) 
+            alertWindow.dismissViewControllerAnimated(true, completion: nil) })
         alertWindow.addAction(cancelBtn)
         self.presentViewController(alertWindow, animated: true, completion: nil)
         
